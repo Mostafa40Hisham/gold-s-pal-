@@ -1,0 +1,105 @@
+/* Coaches Section */
+#Coaches {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    /* Adjust width to fit a maximum of 3 cards */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+/* Individual Card */
+.card {
+    width: 100%;
+    /* Full width of grid column */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #333;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 15px;
+}
+
+.card .content h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.card .content p {
+    margin: 0 0 10px;
+    color: #ccc;
+}
+
+.card .content a {
+    text-decoration: none;
+    color: #a50b0b;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* أجهزة صغيرة (عرض أقل من 768px) */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* تصغير حجم الأعمدة */
+        gap: 15px;
+    }
+
+    .card img {
+        height: 120px;
+        /* تقليل ارتفاع الصورة */
+    }
+
+    .card .content h2 {
+        font-size: 18px;
+        /* تقليل حجم الخط */
+    }
+
+    .card .content p {
+        font-size: 14px;
+        /* تقليل حجم النصوص */
+    }
+}
+
+/* أجهزة صغيرة جدًا (عرض أقل من 480px) */
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        /* عمود واحد */
+    }
+
+    .card img {
+        height: 100px;
+        /* تقليل ارتفاع الصورة أكثر */
+    }
+
+    .card .content h2 {
+        font-size: 16px;
+        /* تقليل حجم العناوين */
+    }
+
+    .card .content p {
+        font-size: 12px;
+        /* تصغير النصوص */
+    }
+}

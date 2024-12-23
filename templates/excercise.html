@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Excercise{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/excercise.css') }}" />
+{% endblock %}
+{% block content %}
+<h1>Muscle Gallery</h1>
+<div class="gallery" id="gallery">
+</div>
+{% endblock %}
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/excercise.js') }}"></script>
+{% endblock %}

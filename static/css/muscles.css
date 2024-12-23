@@ -1,0 +1,66 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+#buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+button {
+    background-color: #DC143C;
+    /* Dark background for the button */
+    color: white;
+    /* Red text color for contrast */
+    border: 2px solid #f44336;
+    /* Red border for emphasis */
+    padding: 12px 24px;
+    /* Padding for better button size */
+    font-size: 16px;
+    /* Font size for readability */
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+    margin: 8px;
+    flex: 1 0 30%;
+    /* Buttons take up 30% width on large screens */
+    min-width: 150px;
+    /* Minimum button width for smaller screens */
+}
+
+button:hover {
+    background-color: #f44336;
+    /* Red background on hover */
+    color: white;
+    /* White text color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    button {
+        flex: 1 0 45%;
+        /* Buttons take up 45% width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        flex: 1 0 100%;
+        /* Buttons take up 100% width on very small screens */
+    }
+}

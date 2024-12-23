@@ -1,0 +1,64 @@
+/* body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+   */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+    color: crimson;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Container for the gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Muscle card */
+.muscle {
+    background-color: crimson;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for muscle card */
+.muscle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Muscle name styling */
+.muscle h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Muscle image styling */
+.muscle img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .muscle {
+        width: 90%;
+    }
+}

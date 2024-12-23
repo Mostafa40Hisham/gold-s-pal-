@@ -1,0 +1,196 @@
+/* Global Adjustments */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('/static/images/nolan.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: #fff;
+    box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #7e0000, #7e0000);
+    color: #fff;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background: linear-gradient(135deg, #ff1a1a, #ff4d4d);
+    transform: scale(1.1);
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #111;
+    flex-wrap: wrap;
+    /* لتفعيل الاستجابة */
+}
+
+.profile-card {
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card h1 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.profile-card label {
+    font-size: 14px;
+    color: #ccc;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+.profile-card input {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.profile-card input:focus {
+    background-color: #727272;
+    outline: none;
+}
+
+.profile-card button {
+    padding: 14px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #7a0000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* الأجهزة اللوحية (عرض أقل من 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .btn {
+        font-size: 18px;
+        padding: 12px 28px;
+    }
+
+    .profile-container {
+        padding: 40px 10px;
+    }
+
+    .profile-card {
+        max-width: 90%;
+        padding: 30px;
+    }
+}
+
+/* الهواتف المحمولة (عرض أقل من 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .profile-card {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .profile-card h1 {
+        font-size: 24px;
+    }
+
+    .profile-card input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .profile-card button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,144 @@
+/* Default Styles */
+.flash-messages {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+    background-color: #970d0d;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.flash-message.error {
+    background-color: #970d0d;
+}
+
+/* Form container styles */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #970d0d;
+    text-align: center;
+}
+
+/* Form element styles */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #970d0d;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    font-size: 14px;
+    color: #fff3f3;
+    background-color: #333;
+    padding: 0 5px;
+    font-weight: 500;
+}
+
+/* File input custom styling */
+.form-group input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
+
+/* Button styling */
+.btn-primary {
+    padding: 12px 25px;
+    background-color: #970d0d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #7e0b0b;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Media Queries */
+
+/* الأجهزة اللوحية (عرض أقل من 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* الهواتف المحمولة (عرض أقل من 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}

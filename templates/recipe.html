@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Recipes{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/recipe.css')}}">
+{% endblock %}
+{% block content %}
+<div class="contaner">
+    <div class="upload_recip">
+        <h3>Upload</h3>
+        <p>Upload Your Recipe</p>
+        <a href="{{ url_for('upload') }}" title="upload recipe"
+            style="color: #b30000; text-decoration: none; font-size: 12px;">Show &#8594;</a>
+    </div>
+    <div class="show_recip">
+        <h3>Show</h3>
+        <p>Go And see A Very Delicious Recipes</p>
+        <a href="{{ url_for('show') }}" title="show recipe"
+            style="color: #b30000; text-decoration: none; font-size: 12px;">Show &#8594;</a>
+    </div>
+</div>
+{% endblock %}

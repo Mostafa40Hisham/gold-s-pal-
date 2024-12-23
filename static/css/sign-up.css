@@ -1,0 +1,176 @@
+/* Reset Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Background Image Styling */
+.wallpapper {
+  background: url('/static/images/meow2.jpg') no-repeat fixed;
+  background-size: cover;
+  /* تغطي الصورة الخلفية بالكامل */
+  width: auto;
+  height: 100vh;
+  /* اجعل الخلفية تمتد لارتفاع الشاشة */
+  margin: 0 auto;
+  /* محاذاة الصفحة للوسط */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.3);
+  /* خلفية شفافة */
+  backdrop-filter: blur(8px);
+  /* ضبابية */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* حواف شفافة */
+  border-radius: 10px;
+  /* تدوير الحواف */
+  padding: 2rem;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف */
+}
+
+/* Heading Style */
+h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Input Container Styling */
+.input-group {
+  position: relative;
+  /* لإدخال الأيقونة */
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  /* مكان الأيقونة */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  /* لون الأيقونة */
+  font-size: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.6rem 0.6rem 0.6rem 2.5rem;
+  /* مساحة للأيقونة داخل الحقل */
+  border: none;
+  border-bottom: 2px solid #ccc;
+  /* خط سفلي */
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #970d0d;
+  /* تغيير لون الخط عند التركيز */
+}
+
+.input-group::placeholder {
+  color: #bbb;
+}
+
+/* Submit Button */
+.sign-up-btn {
+  background-color: #a50b0b;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.sign-up-btn:hover {
+  background-color: #7e0b0b;
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Switch to Login */
+.switch-page a {
+  color: #970d0d;
+  text-decoration: none;
+}
+
+.switch-page a:hover {
+  text-decoration: underline;
+}
+
+input::placeholder {
+  color: #2c2c2c;
+  opacity: 1;
+  /* الشفافية (1 تعني بدون شفافية) */
+}
+
+/* Responsive Design */
+
+/* الشاشات المتوسطة مثل الأجهزة اللوحية */
+@media (max-width: 768px) {
+  .form-box {
+    width: 90%;
+    /* اجعل عرض الفورم أصغر */
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* تقليل حجم النص */
+  }
+
+  .sign-up-btn {
+    font-size: 0.9rem;
+    /* تصغير الزر قليلاً */
+  }
+}
+
+/* الشاشات الصغيرة مثل الهواتف */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    /* حجم أصغر للرأس */
+    margin-bottom: 15px;
+  }
+
+  .input-group input {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    /* تقليل الحشو داخل الحقل */
+  }
+
+  .input-group i {
+    font-size: 0.8rem;
+    /* تقليل حجم الأيقونة */
+  }
+
+  .sign-up-btn {
+    padding: 0.6rem;
+  }
+}

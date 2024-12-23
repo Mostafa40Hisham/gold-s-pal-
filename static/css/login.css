@@ -1,0 +1,159 @@
+/* Reset Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Background Image Styling */
+.wallpapper {
+  background: url("/static/images/meow2.jpg") no-repeat;
+  background-size: cover;
+  /* تغطي الصورة الخلفية بالكامل */
+  width: auto;
+  height: 100vh;
+  /* اجعل الخلفية تمتد لارتفاع الشاشة */
+  margin: 0 auto;
+  /* محاذاة الصفحة للوسط */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Form Container */
+.login-box {
+  background: rgba(255, 255, 255, 0.3);
+  /* خلفية شفافة */
+  backdrop-filter: blur(8px);
+  /* ضبابية */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* حواف شفافة */
+  border-radius: 10px;
+  /* تدوير الحواف */
+  padding: 2rem;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف */
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Input Container Styling */
+.input1 {
+  position: relative;
+  /* لإدخال الأيقونة */
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input1 i {
+  position: absolute;
+  left: 10px;
+  /* مكان الأيقونة */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  /* لون الأيقونة */
+  font-size: 1rem;
+}
+
+.input1 input {
+  width: 100%;
+  padding: 0.6rem 0.6rem 0.6rem 2.5rem;
+  /* مساحة للأيقونة داخل الحقل */
+  border: none;
+  border-bottom: 2px solid #ccc;
+  /* خط سفلي */
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.input1 input:focus {
+  border-bottom: 2px solid #970d0d;
+  /* تغيير لون الخط عند التركيز */
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #a50b0b;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #7e0b0b;
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Register Link */
+p a {
+  color: #970d0d;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+input::placeholder {
+  color: #2c2c2c;
+  /* اللون الذي تريده */
+  opacity: 1;
+  /* الشفافية (1 تعني بدون شفافية) */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+    /* عرض أقل للشاشات الأصغر */
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* تقليل حجم النص */
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    /* تقليل حجم الزر */
+  }
+}
+
+@media (max-width: 480px) {
+  .input1 input {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    /* تقليل الحشو للشاشات الصغيرة */
+  }
+
+  .input1 i {
+    font-size: 0.8rem;
+    /* تقليل حجم الأيقونة */
+  }
+
+  .login-btn {
+    padding: 0.6rem;
+  }
+}

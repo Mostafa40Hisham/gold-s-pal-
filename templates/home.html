@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+{% endblock %}
+{% block content %}
+<section id="hero" class="hero">
+    <div class="text">
+        <h4 style="color: #be0c0c; font-weight: bold;">Hello I'm Cbum</h4>
+        <h1>Gold's pal</h1>
+        <p>We have everything you might need. Subscribe and see for yourself.</p>
+        <a href="#" class="btn" onclick="changeBackgroundColor()">Change Theme</a>
+    </div>
+
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="service-box">
+        <h3>Recipes</h3>
+        <p>A Journey to 1000 Calories Begins with a Meal</p>
+        <a href="{{ url_for('recipe') }}" style="color: #b30000; text-decoration: none; font-size: 12px;">KNOW MORE
+            &#8594;</a>
+    </div>
+    <div class="service-box" style="background-color: #970d0d;">
+        <h3>Inbody</h3>
+        <p>Check your fat</p>
+        <a href="{{ url_for('inbody') }}" style="color: #fff; text-decoration: none; font-size: 12px;">KNOW MORE
+            &#8594;</a>
+    </div>
+    <div class="service-box">
+        <h3>Excercise</h3>
+        <p>Waking up to muscle pain is better than fake love letters</p>
+        <a href="{{ url_for('excercise') }}" style="color: #b30000; text-decoration: none; font-size: 12px;">KNOW MORE
+            &#8594;</a>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <h2>12</h2>
+    <p>Years Experience</p>
+    <div class="stats">
+        <div class="stat">
+            <h3>60K+</h3>
+            <p>Clients</p>
+        </div>
+        <div class="stat">
+            <h3>1K</h3>
+            <p>Exercises</p>
+        </div>
+        <div class="stat">
+            <h3>122k+</h3>
+            <p>Recipes</p>
+        </div>
+        <div class="stat">
+            <h3>10</h3>
+            <p>Achievements</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_js %}
+<script>
+    function navigateToSection(event, sectionId) {
+        event.preventDefault();
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function changeBackgroundColor() {
+        const body = document.body;
+        body.style.backgroundColor = body.style.backgroundColor === 'black' ? '#222' : 'black';
+    }
+
+    function showMessage(serviceName) {
+        alert(`You clicked on ${serviceName}`);
+    }
+</script>
+{% endblock %}

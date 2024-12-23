@@ -1,0 +1,79 @@
+.contaner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.recipe_show {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.recipe_show h3 {
+    color: #a50b0b;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.recipe_show img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.recipe_show .cal,
+.recipe_show .descr {
+    color: #ccc;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+.recipe_show:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries */
+
+/* للأجهزة اللوحية (عرض أقل من 768px) */
+@media (max-width: 768px) {
+    .recipe_show {
+        width: 48%;
+        /* عرض العنصر بحجم أكبر على الشاشات المتوسطة */
+    }
+}
+
+/* للهواتف المحمولة (عرض أقل من 480px) */
+@media (max-width: 480px) {
+    .recipe_show {
+        width: 100%;
+        /* عرض العنصر بكامل الشاشة على الهواتف */
+    }
+
+    .recipe_show h3 {
+        font-size: 1rem;
+        /* تقليل حجم الخط */
+    }
+
+    .recipe_show .cal,
+    .recipe_show .descr {
+        font-size: 0.7rem;
+        /* تقليل حجم النصوص */
+    }
+
+    .contaner {
+        gap: 10px;
+        /* تقليل المسافة بين العناصر */
+        padding: 10px;
+        /* تقليل الحشوات */
+    }
+}

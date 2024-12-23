@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
+{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero" id="hero">
+    <div>
+        <h1>Welcome to the Gym</h1>
+        <p>Your ultimate destination for fitness and health.</p>
+        <a href="#profile" class="btn">View Profile</a>
+    </div>
+</div>
+
+<!-- Profile Section -->
+<div class="profile-container" id="profile">
+    <div class="profile-card">
+        <h1>User Profile</h1>
+        <form method="POST" action="/profile">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" value="{{ firstname }}" required>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" value="{{ lastname }}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ email }}" required readonly>
+
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" value="{{ date_of_birth }}" required>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

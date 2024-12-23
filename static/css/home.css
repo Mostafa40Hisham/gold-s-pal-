@@ -1,0 +1,192 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-image: url('/static/images/leo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 60vh;
+}
+
+.hero .text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.hero .btn {
+    display: inline-block;
+    background-color: #970d0d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* جعل العناصر تتوزع تلقائياً عند الحاجة */
+    margin: 50px 0;
+}
+
+.services .service-box {
+    background-color: #111;
+    border: 1px solid #222;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.services .service-box:hover {
+    background-color: #333;
+}
+
+.services .service-box h3 {
+    margin-bottom: 10px;
+}
+
+.services .service-box p {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.experience {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.experience h2 {
+    color: #970d0d;
+    font-size: 50px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* جعل الإحصائيات تتوزع تلقائياً عند الحاجة */
+    margin: 30px 0;
+}
+
+.stats .stat {
+    background-color: #111;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.stats .stat h3 {
+    color: #970d0d;
+    font-size: 24px;
+}
+
+/* Responsive Design */
+
+/* الأجهزة اللوحية (شاشات متوسطة) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        /* ترتيب العمود لعناصر الـ hero */
+        text-align: center;
+        padding: 20px;
+        height: auto;
+        /* السماح بمرونة الارتفاع */
+    }
+
+    .hero .text {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .services .service-box {
+        width: 45%;
+        /* تقليل عرض الصندوق */
+    }
+
+    .experience h2 {
+        font-size: 40px;
+    }
+
+    .stats .stat {
+        width: 45%;
+        /* تقليل عرض الإحصائيات */
+    }
+}
+
+/* الهواتف المحمولة (شاشات صغيرة) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .hero .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .services .service-box {
+        width: 90%;
+        /* عرض أكبر لتناسب الشاشة */
+    }
+
+    .experience h2 {
+        font-size: 30px;
+    }
+
+    .stats .stat {
+        width: 90%;
+        /* عرض أكبر لتناسب الشاشة */
+    }
+}

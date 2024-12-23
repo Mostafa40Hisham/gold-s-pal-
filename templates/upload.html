@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Upload Recipe{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/upload.css')}}">
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Upload Recipe</h1>
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" required placeholder=" ">
+            <label for="name">Recipe Name</label>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="description" name="description" rows="4" required
+                placeholder=" "></textarea>
+            <label for="description">Description</label>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" id="calories" name="calories" required placeholder=" ">
+            <label for="calories">Calories</label>
+        </div>
+        <div class="form-group">
+            <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*" required>
+            <label for="photo">Recipe Image</label>
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

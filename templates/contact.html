@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/contact.css')}}">
+{% endblock %}
+{% block content %}
+<div class="contact-card">
+    <h1 id="company-name">INGOUDE COMPANY</h1>
+    <h2>Contact Us</h2>
+    <p>Reach out to our dedicated team for any inquiries, assistance, or information you need.</p>
+
+    <div class="contact-info">
+        <p><span class="icon">✉</span> <span id="email"></span></p>
+        <p><span class="icon">📍</span> <span id="address"></span></p>
+        <p><span class="icon">🌐</span> <a id="website" href="#" target="_blank"></a></p>
+        <p><span class="icon">📞</span> <span id="phone"></span></p>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/contact.js') }}">
+</script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}inbody{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}">
+{% endblock %}
+{% block content %}
+    <h1 id="Coaches">Coaches</h1>
+    <div id="coach-container" class="card-container"></div> 
+    {% endblock %}
+    {% block extra_js %}
+    <script src="{{ url_for('static', filename='js/about.js') }}">
+    </script>
+    {% endblock %}

@@ -1,0 +1,150 @@
+.bas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* لتوفير مساحة على الهواتف */
+}
+
+.inbody-container {
+  background-color: #383838;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  color: #000000;
+}
+
+input:focus,
+select:focus {
+  border-color: #720000;
+}
+
+.calculate-btn {
+  background-color: #720000;
+  color: #ffffff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.calculate-btn:hover {
+  background-color: #ff0000;
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
+
+#results {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Media Queries */
+
+/* للأجهزة اللوحية (عرض أقل من 768px) */
+@media (max-width: 768px) {
+  .inbody-container {
+    padding: 1.5rem;
+    /* تقليل الحشوات */
+    max-width: 90%;
+    /* تقليل العرض */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    /* تقليل حجم الخط */
+  }
+
+  p {
+    font-size: 0.8rem;
+    /* تقليل حجم النص */
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+    /* تصغير حجم الحقول */
+  }
+
+  .calculate-btn {
+    font-size: 0.9rem;
+    /* تصغير حجم الزر */
+  }
+}
+
+/* للهواتف المحمولة (عرض أقل من 480px) */
+@media (max-width: 480px) {
+  .inbody-container {
+    padding: 1rem;
+    /* تقليل الحشوات أكثر */
+    max-width: 100%;
+    /* العرض الكامل للشاشة */
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    /* تصغير العنوان */
+  }
+
+  p {
+    font-size: 0.75rem;
+    /* تصغير النص */
+  }
+
+  input,
+  select {
+    font-size: 0.8rem;
+    /* تقليل حجم الحقول */
+    padding: 0.6rem;
+    /* تقليل الحشوات */
+  }
+
+  .calculate-btn {
+    font-size: 0.8rem;
+    /* تصغير حجم الزر */
+    padding: 0.6rem;
+    /* تقليل الحشوات */
+  }
+}

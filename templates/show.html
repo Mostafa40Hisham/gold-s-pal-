@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Show{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/show.css')}}">
+{% endblock %}
+{% block content %}
+<div class="contaner">
+    {% for data in data %}
+    <div class="recipe_show">
+        <h3>{{data[1]}}</h3>
+        <img src="{{ url_for('static', filename='uploads/' + data[4]) }}" alt="{{data[1]}}">
+        <p class="descr">Description: {{data[3]}}</p>
+        <p class="cal">Calories: {{data[2]}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
